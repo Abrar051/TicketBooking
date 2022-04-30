@@ -37,6 +37,50 @@
             <br />
             <br />
         </div>
+        <div>
+            <asp:Label ID="Label1" runat="server" Text="Full Name"></asp:Label>
+&nbsp;
+            <asp:TextBox ID="TextBox8" runat="server" Width="242px"></asp:TextBox>
+            <br />
+            <br />
+            From City&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox1" runat="server" Width="238px"></asp:TextBox>
+            <br />
+            <br />
+            Single Lady&nbsp;&nbsp;
+            <asp:CheckBox ID="CheckBox1" runat="server" />
+            <br />
+            <br />
+            From Date&nbsp;&nbsp;&nbsp; 
+            <asp:TextBox ID="TextBox2" runat="server" Width="224px"></asp:TextBox>
+            <br />
+            <br />
+            Number of Tickets&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox3" runat="server" Width="174px"></asp:TextBox>
+            <br />
+            <br />
+            Mobile Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox4" runat="server" Width="175px"></asp:TextBox>
+            <br />
+            <br />
+            Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox5" runat="server" Width="167px"></asp:TextBox>
+            <br />
+            <br />
+            To Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox6" runat="server" Height="19px" Width="174px"></asp:TextBox>
+            <br />
+            <br />
+            Insurance Opt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <asp:CheckBox ID="CheckBox2" runat="server" />
+            <br />
+            <br />
+            Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox7" runat="server" Width="166px"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+        </div>
     </form>
 </body>
 </html>

@@ -69,7 +69,7 @@ namespace BusinessLogic
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE dbo.employee SET Full_Name=@fname , From_City=@lname , Gender=@gender , Age=@age , Phone=@phone , Education=@education , Salary=@salary WHERE  Email=@email";
+                cmd.CommandText = "UPDATE dbo.ticketorder SET Full_Name=@name , From_City=@city , Single_Lady=@singleConfig , From_Date=@date , Number_of_Tickets=@ticketNumbers , Mobile_Number=@mobileNumber , Address=@address , To_City=@toCity , Round_Trip=@roundTrip , To_Date=@toDate , Insurance_Opt=@insuranceOpt WHERE  Email=@email";
                 cmd.Parameters.AddWithValue("@name", passenger.name);
                 cmd.Parameters.AddWithValue("@city", passenger.city);
                 cmd.Parameters.AddWithValue("@singleConfig", passenger.singleConfig);
