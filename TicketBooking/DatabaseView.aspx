@@ -30,9 +30,9 @@
             <asp:SqlDataSource ID="ticketorder" runat="server" ConnectionString="<%$ ConnectionStrings:mydbConnectionString %>" SelectCommand="SELECT [Full_Name], [From_City], [Single_Lady], [From_Date], [Number_of_Tickets], [To_Date], [Insurance_Opt], [Email], [To_City], [Address] FROM [ticketorder]"></asp:SqlDataSource>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Update" Width="156px" />
+            <asp:Button ID="Button1" runat="server" Text="Update" Width="156px" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" Text="Delete" Width="161px" />
+            <asp:Button ID="Button2" runat="server" Text="Delete" Width="161px" OnClick="Button2_Click" />
             <br />
             <br />
             <br />
@@ -44,7 +44,11 @@
             <br />
             <br />
             From City&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Width="238px"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>San Jose</asp:ListItem>
+                <asp:ListItem>San Francisco</asp:ListItem>
+                <asp:ListItem>Santa Clara</asp:ListItem>
+            </asp:DropDownList>
             <br />
             <br />
             Single Lady&nbsp;&nbsp;

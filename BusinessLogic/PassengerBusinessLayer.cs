@@ -69,7 +69,6 @@ namespace BusinessLogic
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "UPDATE dbo.ticketorder SET Full_Name=@name , From_City=@city , Single_Lady=@singleConfig , From_Date=@date , Number_of_Tickets=@ticketNumbers , Mobile_Number=@mobileNumber , Address=@address , To_City=@toCity , Round_Trip=@roundTrip , To_Date=@toDate , Insurance_Opt=@insuranceOpt WHERE  Email=@email";
                 cmd.Parameters.AddWithValue("@name", passenger.name);
                 cmd.Parameters.AddWithValue("@city", passenger.city);
                 cmd.Parameters.AddWithValue("@singleConfig", passenger.singleConfig);
@@ -78,17 +77,17 @@ namespace BusinessLogic
                 cmd.Parameters.AddWithValue("@mobileNumber", passenger.mobileNumber);
                 cmd.Parameters.AddWithValue("@address", passenger.address);
                 cmd.Parameters.AddWithValue("@toCity", passenger.city);
-                cmd.Parameters.AddWithValue("@roundTrip", passenger.roundTrip);
+                // cmd.Parameters.AddWithValue("@roundTrip", passenger.roundTrip);
                 cmd.Parameters.AddWithValue("@toDate", passenger.toDate);
                 cmd.Parameters.AddWithValue("@insuranceOpt", passenger.insuranceOpt);
                 cmd.Parameters.AddWithValue("@email", passenger.email);
-
-                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "UPDATE dbo.ticketorder SET Full_Name=@name , From_City=@city , Single_Lady=@singleConfig , From_Date=@date , Number_of_Tickets=@ticketNumbers , Mobile_Number=@mobileNumber , Address=@address , To_City=@toCity  , To_Date=@toDate , Insurance_Opt=@insuranceOpt WHERE  Email=@email";
                 cmd.ExecuteNonQuery();
+                con.Close();
             }
         }
 
-        public void DeletePassengers(int id)
+        public void DeletePassengers(Passenger passenger)
         {
             string connectionString = "Data Source=.;Initial Catalog=mydb;Integrated Security=True";
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -96,10 +95,14 @@ namespace BusinessLogic
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@PassengerId", id);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("email",passenger.email);
+                cmd.CommandText =  "DELETE from dbo.ticketorder where Email=@email";
                 cmd.ExecuteNonQuery();
             }
         }
+
+
 
     }
 }
